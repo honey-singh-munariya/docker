@@ -1,0 +1,15 @@
+FROM python:3.8-alpine
+
+WORKDIR /app
+
+# 1. Copy only requirements first to leverage Docker layer caching
+COPY backend/requirements.txt ./
+
+# 2. Install dependencies (cached unless requirements.txt changes)
+RUN pip install --no-cache-dir -r requirements.txt
+
+# 3. Copy the rest of your application code
+COPY backend/ ./
+
+# 4. Use double quotes for the exec form of CMD
+CMD ["python", "app.py"]

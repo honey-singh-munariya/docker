@@ -1,0 +1,18 @@
+{
+    "name": "ares-frontend",
+    "version": "1.0.0",
+    "description": "Frontend for the Ares application",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "keywords": [
+        "ares",
+        "frontend",
+        "express"
+    ],
+    "author": "Honey singh munariya",
+    "dependencies": {
+        "express": "^4.22.3"
+    }
+}
